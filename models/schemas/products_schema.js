@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 const objectSchema = {
     id: { 
-        type: Number, 
+        type: String, 
         required: true,
         unique: true
     },
@@ -21,8 +21,8 @@ const objectSchema = {
         required: true 
     },
     provider: { 
-    	type: String,
-    	ref: 'Providers' 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Provider' 
     },
     image:{
         type: String,

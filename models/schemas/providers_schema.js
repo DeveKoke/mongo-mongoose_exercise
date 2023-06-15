@@ -3,11 +3,10 @@ const mongoose = require('mongoose');
 
 // * ESTABLECEMOS VALIDACIÓN Y MODELO DE SCHEMA
 const dataSchema = {
-    _id: mongoose.Schema.Types.ObjectId,
-    company_name:  { 
+company_name:  { 
         type: String, 
         required: true,
-        unique: true 
+        unique: true
     },
 CIF: { 
     type: Number, 
@@ -26,7 +25,7 @@ url_web: {
 const providerSchema = mongoose.Schema(dataSchema);
 
 // * CREAMOS COLECCIÓN CON MODEL
-var Provider = mongoose.model('Providers', providerSchema);
+var Provider = mongoose.model('Provider', providerSchema);
 
 module.exports = Provider;
 
